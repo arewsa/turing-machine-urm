@@ -26,9 +26,11 @@ class URM(BaseModel):
         self.registers[register_index] += 1
         self.current_instruction_index += 1
 
-    def transfer(self, destination_register_index: int, source_register_index: int):
+    def transfer(self, source_register_index: int, destination_register_index: int):
         if source_register_index not in self.registers:
             self.registers[source_register_index] = 0
+        if destination_register_index not in self.registers:
+            self.registers[destination_register_index] = 0
         self.registers[destination_register_index] = self.registers[source_register_index]
         self.current_instruction_index += 1
 

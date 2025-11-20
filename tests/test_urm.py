@@ -1,9 +1,4 @@
-import sys
-import os
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from urm import URM
+from computational_models import URM
 
 def sum_of_two(x: int, y: int):
     urm = URM(registers=f"{x} {y}", program=[

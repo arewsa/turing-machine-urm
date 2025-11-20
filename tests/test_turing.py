@@ -1,9 +1,4 @@
-import sys
-import os
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from turing_machine import State, TuringMachine
+from computational_models import State, TuringMachine
 
 
 def double_ones_machine(x: int) -> TuringMachine:

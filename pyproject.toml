@@ -1,10 +1,17 @@
 [project]
-name = "coursework"
+name = "computational-models"
 version = "0.1.0"
-description = "Add your description here"
+description = "Implementation of Turing Machine and Unlimited Register Machine (URM) computational models"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.12.4",
     "regex>=2025.11.3",
 ]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatchling.build]
+packages = ["computational_models"]
